@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>Used to update your profile picture</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
+	<string>Used to update your profile picture</string>
 	<key>CFBundleSignature</key>
 	<string></string>
 	<key>NSHumanReadableCopyright</key>

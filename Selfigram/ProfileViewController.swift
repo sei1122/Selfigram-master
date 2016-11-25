@@ -40,6 +40,24 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.present(pickerController, animated: true, completion: nil)
         
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        // 1. When the delegate method is returned, it passes along a dictionary called info.
+        //    This dictionary contains multiple things that maybe useful to us.
+        //    We are getting an image from the UIImagePickerControllerOriginalImage key in that dictionary
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            //2. To our imageView, we set the image property to be the image the user has chosen
+            profileImageView.image = image
+            
+        }
+        
+        //3. We remember to dismiss the Image Picker from our screen.
+        dismiss(animated: true, completion: nil)
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +70,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*
